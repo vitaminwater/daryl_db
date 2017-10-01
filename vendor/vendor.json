@@ -3,6 +3,10 @@
 	"ignore": "test",
 	"package": [
 		{
+			"path": "get",
+			"revision": ""
+		},
+		{
 			"checksumSHA1": "SEWHtp6LFg0zD7ZEojzgOVYBx4E=",
 			"path": "github.com/Masterminds/squirrel",
 			"revision": "e13dbacee404686afd0acf2d44b8d34869605e03",
@@ -33,10 +37,20 @@
 			"revisionTime": "2017-09-22T17:26:34Z"
 		},
 		{
+			"checksumSHA1": "zmC8/3V4ls53DJlNTKDZwPSC/dA=",
+			"path": "github.com/satori/go.uuid",
+			"revision": "5bf94b69c6b68ee1b541973bb8e1144db23a194b",
+			"revisionTime": "2017-03-21T23:07:31Z"
+		},
+		{
 			"checksumSHA1": "BYvROBsiyAXK4sq6yhDe8RgT4LM=",
 			"path": "github.com/sirupsen/logrus",
 			"revision": "89742aefa4b206dcf400792f3bd35b542998eb3b",
 			"revisionTime": "2017-08-22T13:27:46Z"
+		},
+		{
+			"path": "go",
+			"revision": ""
 		}
 	],
 	"rootPath": "github.com/vitaminwater/daryl_db"

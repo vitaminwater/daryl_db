@@ -1,7 +1,6 @@
 package daryl_db
 
 import (
-	"database/sql"
 	"fmt"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
@@ -12,7 +11,7 @@ import (
 var db *sqlx.DB
 
 func getEnv(name, defaultValue string) string {
-	val := os.GetEnv(name)
+	val := os.Getenv(name)
 	if val == "" {
 		return defaultValue
 	}
@@ -30,8 +29,4 @@ func Init() {
 		log.Fatal(err)
 	}
 	db = d
-}
-
-func NamedExec(q string, s interface{}) (sql.Result, error) {
-	return db.NamedExec(q, s)
 }

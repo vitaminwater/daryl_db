@@ -41,3 +41,20 @@ func ListField(s interface{}, access string) ([]string, error) {
 	}
 	return fields, nil
 }
+
+func SetModelIntField(s interface{}, field string, value int) error {
+	t := reflect.TypeOf(s)
+
+	if t.Kind() != reflect.Ptr {
+		return errors.New("SetModelIntField expects a pointer argument")
+	}
+
+	ps := reflect.ValueOf(s).Elem()
+
+	f := ps.FieldByName(field)
+	if !f.IsValid() || !f.CanSet() || f.Kind() != reflect.Int {
+		return errors.New("SetModelIntField Invalid field or cannot set or not Int")
+	}
+	f.SetInt(int64(value))
+	return nil
+}
